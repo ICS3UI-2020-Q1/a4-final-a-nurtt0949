@@ -1,6 +1,7 @@
+import java.util.Scanner;
 /**
- *
- * @author 
+ *Determines factors of a number
+ * @author Tolga Nurtekin
  */
 public class Main {
 
@@ -9,7 +10,38 @@ public class Main {
    * @param args the command line arguments
    */
   public static void main(String[] args) {
-    // TODO code application logic here
-    
+     //create a Scanner
+     Scanner input = new Scanner(System.in);
+     //declare a variable for users number
+       int n;
+     //declare a variable to count
+       int count = 1; 
+       //craete a loop to force the user to type in a positive number 
+       do{
+          System.out.println("Please enter a positive integer to determine its factors:");
+           n = input.nextInt();
+      }while(n <= 0);
+     
+     //tell user the factors of their number
+      System.out.println("The factors of " + n + " are:");
+     
+     //loop stsement for fatctors
+      while(n >= count){
+       if(n % count == 0){
+         System.out.println(count);
+      }
+         count = count + 1;
+      }
+      
+  
   }
 }
+
+       
+
+
+    
+     
+
+    
+
